@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65b31e7fb06192bba05dcd62"
+  },
+  "sender": "Shanellze",
+  "receiver": "StarLight",
+  "image": "image.png",
+  "timestamp": "25/12/23 18:30:00",
+  "seen": true,
+  "text": "Hi, how are you?"
+},
+{
+  "_id": {
+    "$oid": "65b31f6fb06192bba05dcd67"
+  },
+  "sender": "StarLight",
+  "receiver": "Shanellze",
+  "text": "Hi, I am doing good, you?",
+  "image": null,
+  "timestamp": "25/12/23 18:45:00",
+  "seen": false
+},
+{
+  "_id": {
+    "$oid": "65b31fe3b06192bba05dcd69"
+  },
+  "sender": "DarkFall",
+  "receiver": "Shanellze",
+  "text": "Hi!!",
+  "image": null,
+  "timestamp": "04/01/24 12:15:00",
+  "seen": true
+}]

@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65b31ba6b06192bba05dcd32"
+  },
+  "postID": {
+    "$oid": "65b30529b06192bba05dcd1e"
+  },
+  "username": "StarLight",
+  "text": "I agree!",
+  "timestamp": "22/01/24 20:30:00"
+},
+{
+  "_id": {
+    "$oid": "65b3997cb06192bba05dcd99"
+  },
+  "postID": {
+    "$oid": "65b30529b06192bba05dcd1e"
+  },
+  "username": "DarkFall",
+  "text": "Great post!",
+  "timestamp": "22/01/24 20:45:00"
+},
+{
+  "_id": {
+    "$oid": "65b39a4eb06192bba05dcd9e"
+  },
+  "postID": {
+    "$oid": "65b306dfb06192bba05dcd1f"
+  },
+  "username": "StarLight",
+  "text": "Tell me about it!",
+  "timestamp": "22/01/24 20:30:00"
+}]

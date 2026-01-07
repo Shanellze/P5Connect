@@ -1,0 +1,919 @@
+/* ------- All elements ------- */
+* {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* ------- Body ------- */
+body {
+    background-color: #f4f4f4;
+    background-image: url('/images/backgroundImage.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ------- Header ------- */
+header {
+    width: 100%;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+}
+
+header ul {
+    width: 100%;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    background-color: transparent; 
+    color: #fff;
+}
+
+
+header li {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+h1 {
+    margin-right: auto;
+}
+
+#searchBar {
+    max-width: 295px;
+    margin-left: 200px;
+}
+
+
+header input[type="text"] {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+header input[type="submit"] {
+    background-color: #ff2929;
+    color: #FFF;
+    margin-left: 45px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header input[type="submit"]:hover {
+    background-color: #e94040;
+    color: #fff;
+}
+
+
+
+/* ------- Login and registration Container ------- */
+
+.formContainer {
+    width: 400px;
+    height: 520px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px#000;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formContainer h2 {
+    font-size: 60px;
+    color: #ff2929;
+    margin: 80px 0px 20px 60px;
+}
+
+.formContainer p {
+    width: 275px;
+    height: 20px;
+    color: #FFF;
+    margin-top: 10px;
+    margin-left: 60px;
+    text-align: center;
+}
+
+.formContainer #errorMessage {
+    width: 275px;
+    height: auto;
+    min-height: 20px;
+    margin-top: 5px;
+    margin-left: 60px;
+    padding-bottom: 5px;
+    color: #f24848;
+    text-align: center;
+}
+
+.formContainer .inputField {
+    width: 267px;
+    height: 30px;
+    margin-left: 60px;
+    margin-top: 10px;
+    padding-left: 8px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    outline: none;
+    opacity: 1;
+    color: #FFF;
+}
+
+/* Indicates which box the user has selected */
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    outline-color: #ff2929;
+}
+
+.formContainer .button {
+    width: 285px;
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 0px;
+    background-color: #ff2929;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 25px;
+    border: #FFF;
+}
+
+.formContainer .button:hover {
+    background-color: #e94040;
+    color: #fff;
+}
+
+.formContainer .hyperButton {
+    color: #ff2929;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formContainer .hyperButton:hover {
+    color: #e94040;
+    text-decoration: underline;
+}
+
+.formContainer .hyperButton:active {
+    color: rgb(249, 227, 31);
+    text-decoration: underline;
+}
+
+
+/* ------- Main Page Containers ------- */
+
+/* Defining the page containers */
+.pageContainer {
+    width: 600px;
+    height: 600px;
+    border-radius: 25px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px#000;
+}
+
+/* Styling the h2 element for the page containers */
+.pageContainer h2 {
+    font-size: 25px;
+    color: #ff2929;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Styling the p element for the page containers */
+.pageContainer p {
+    color: #FFF;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    overflow: hidden;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+
+/* ----- Stats ----- */
+.stats {
+    width: 100px;
+    margin-top: 15px;
+    position: absolute;
+    text-align: center;
+}
+
+#stat2, #profileStat2 {
+    margin-left: 90px;
+}
+
+#stat3, #profileStat3 {
+    margin-left: 180px;
+}
+
+.label {
+    color: #ff2929;
+    font-weight: bold;
+}
+
+.count {
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+
+/* ----- Post ----- */
+.post {
+    max-width: 560px;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.post h2 {
+    font-size: 18px;
+    color: #ffffff;
+    position: absolute;
+    margin: -55px 0 0 70px;
+}
+
+.post p {
+    color: #fff;
+    margin-left: 70px;
+}
+
+.post .timestamp {
+    color: #a49f9f;
+    font-size: 14px;
+    margin-top: -30px;
+}
+
+.post .content {
+    margin-top: 10px;
+}
+
+.postImage {
+    margin-left: 70px;
+    margin-top: 10px;
+    max-width: 490px;
+}
+
+.post .likeButton {
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.likeButton {
+    position: relative;
+    width: 30px;
+    height: 27px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.likeButton:before,
+.likeButton:after {
+    position: absolute;
+    content: "";
+    left: 15px;
+    top: 0;
+    width: 15px; 
+    height: 24px; 
+    background-color: rgb(59, 55, 55);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.likeButton:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+
+.post .commentButton {
+    margin-left: 30px;
+}
+
+.commentButton {
+    position: absolute;
+    font-size: 28px;
+    color: rgb(59, 55, 55);
+    margin-top: 17px;
+    width: 30px;
+    height: 27px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ----- User Icons -----  */
+
+.user{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.user h2{
+    margin-top: -45px;
+    margin-left: 60px;
+    position: absolute;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.user p{
+    margin-top: -20px;
+    margin-left: 60px;
+    position: absolute;
+    color: #a49f9f;
+}
+
+
+/* ----- Notifications ----- */
+
+.notification {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.notification .notifPic {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    overflow: hidden;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.notification p{
+    margin-top: -45px;
+    margin-left: 80px;
+    position: absolute;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.notification .timestamp{
+    margin-top: -20px;
+    color: #a49f9f;
+    font-size: 14px;
+}
+
+
+/* - - - - Profile Menu container - - - - */
+
+#profileMenu {
+    width: 300px;
+    position:fixed;
+    top: 55%;
+    left: 18%;
+}
+
+#profileMenuPic {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#profileMenu h2 {
+    margin-top: 195px;
+}
+
+#profileMenu p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+#profileMenu ul {
+    list-style-type: none;
+    margin-top: 85px;
+    padding: 0;
+}
+
+#profileMenu ul li button {
+    margin-left: 20px;
+    padding: 5px;
+    color: #ff2929;
+    background-color: transparent;
+    text-decoration: none;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#profileMenu ul li button:hover {
+    color: #e94040;
+}
+
+#profileMenu ul li button:active {
+    color: #e94040;
+}
+
+#menuStats {
+    width: 300px;
+}
+
+/* - - - - Feed container - - - - */
+
+#feed{
+    display: flex;
+    flex-direction: column;
+    padding-top: 105px;
+    padding-left: 420px;
+}
+
+#feed .post {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px #000;
+}
+
+
+/* - - - - Create Post container - - - - */
+
+#createPost {
+    position: static;
+    max-width: 560px;
+    height: 195px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px #000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#createPost h2 {
+    font-size: 25px;
+    color: #ff2929;
+}
+
+.postContent {
+    margin-top: 10px;
+    margin-left: 20px;
+    position: absolute;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 470px;
+    padding: 10px;
+    resize: none; 
+    height: 100px;
+}
+
+#imageUpload{
+    margin-top: 150px;
+    position: absolute;
+}
+
+
+#postContent::-webkit-scrollbar {
+    display: none;
+}
+
+#postContent input[type="text"] {
+    color: #fff;
+    width: 100%;
+}
+
+
+/* - - - - Active following container - - - - */
+
+#activeFollowing {
+    width: 300px;
+    height: 195px;
+    position: fixed;
+    top: 27%;
+    left: 82%;
+}
+
+#userContainer{
+    width: 260px;
+    height: 125px;
+    margin-left: 20px;
+    overflow-y: scroll;
+}
+
+#userContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* - - - - News and Updates container - - - - */
+
+#newsAndUpdates {
+    width: 300px;
+    height: 395px;
+    position: fixed;
+    top: 69%;
+    left: 82%;
+}
+
+#newsAndUpdatesContainer{
+    width: 260px;
+    height: 330px;
+    overflow-y: scroll;
+}
+
+#newsAndUpdatesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#newsAndUpdatesContainer .post{
+    background-color: transparent;
+}
+
+
+/* - - - - Following container - - - - */
+
+#followingContainer{
+    width: 600px;
+    height: 530px;
+    overflow-y: scroll;
+    margin: 20px;
+}
+
+#followingContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#followingContainer .messageButton{
+    margin-left: 240px;
+}
+
+#followingContainer button{
+    width: 120px;
+    height: 40px;
+    margin-top: -10px;
+    background-color: #ff2929;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 25px;
+    border: #FFF;
+}
+
+
+/* - - - - Notifications container - - - - */
+
+#notificationContainer{
+    width: 600px;
+    height: 530px;
+    overflow-y: scroll;
+    margin: 20px;
+}
+
+#notificationContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#notificationContainer h2{
+    color: #FFF;
+    font-size: 18px;
+}
+
+#newNotification{
+    width: 540px;
+}
+
+
+/* - - - - Profile page container - - - - */
+
+.profileContainer{
+    display: flex; 
+    flex-direction: column;
+    padding-top: 105px;
+    padding-left: 420px;
+}
+
+.profileContainer .post{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px #000;
+}
+
+.profileContainer #postTitle {
+    color: #ffffff;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.myProfile{
+    position: static;
+    max-width: 560px;
+    height: 195px;
+    top: 31%;
+    left: 50%;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 8px 8px 50px #000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.myProfile h2 {
+    font-size: 25px;
+    color: #ff2929;
+    margin-top: 40px;
+    margin-left: 240px;
+}
+
+.myProfile p {
+    color: #FFF;
+    margin-left: 240px;
+}
+
+#profilePagePic {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+
+}
+
+#profileStats {
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+
+/* - - - - Message container - - - - */
+
+#messagesPage {
+    width: 900px;
+    top: 55%;
+    left: 60.5%;
+}
+
+#messagesBox {
+    border-left: 2.5px solid;
+    border-color: #0e0c0c;
+    position: absolute;
+    top: 55%;
+    left: 70.9%;
+}
+
+
+.newMessageButton{
+    font-size: 36px;
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 240px;
+}
+
+.conversationHistory{
+    width:300px;
+    height: 520px;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+.conversationHistory::-webkit-scrollbar {
+    display: none;
+}
+
+.conversationHistory .message{
+    width: 100%;
+    height:80px;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.conversationHistory .message h2{
+    font-size: 18px;
+    margin-left: 60px;
+    margin-top: -50px;
+}
+
+.conversationHistory .message .timestamp{
+    position: absolute;
+    margin-left: 220px;
+    margin-top: -18px;
+    color: #a49f9f;
+    font-size: 14px;
+}
+
+.conversationHistory .message .content{
+    position: absolute;
+    margin-left: 60px;
+}
+
+
+.userInfo{
+    width:100%;
+    height: 80px;
+    border-bottom: 2.5px solid#0e0c0c;
+}
+
+.userInfo #pic{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.userInfo h2{
+    margin-left: 80px;
+    margin-top: -65px;
+    color: #FFF;
+}
+
+.userInfo .activity{
+    position: absolute;
+    margin-left: 80px;
+    margin-top: -2px;
+    color: #a49f9f;
+}
+
+
+.chatBox{
+    width:100%;
+    height: 160px;
+    margin-top: 360px;
+    border-top: 2.5px solid#0e0c0c;
+}
+
+.chatBox #postContent{
+    font-size: 18px;
+}
+
+.chatBox #sendButton{
+    margin-left: 500px;
+    margin-top: 100px;
+    color: #FFF;
+    background-color: #ff2929;
+    border: none;
+    padding: 8px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* - - - - Popup - - - - */
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popupPost {
+    height: 250px;
+    position: fixed;
+}
+
+#popupPost .profilePic{
+margin-left: 20px;
+}
+
+/* Styling the exit button */
+#exitButton {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Styling the post button */
+.postButton {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    color: #FFF;
+    background-color: #ff2929;
+    border: none;
+    padding: 8px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* - - - - Search Page container - - - - */
+
+#searchPage h2 {
+    margin: 20px 0px 10px 20px;
+}
+
+#searchUsers,
+#searchPosts {
+    width: 297.5px;
+    color: #FFF;
+    background-color: #ff2929;
+    border: none;
+    padding: 8px 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#searchUsers:hover,
+#searchPosts:hover {
+    background-color: #e94040;
+    color: #fff;
+}
+
+.searchPages{
+    width: 600px;
+    height: 530px;
+    overflow-y: scroll;
+    margin: 20px;
+}
+
+.searchPages::-webkit-scrollbar {
+    display: none;
+}
+
+
+#searchUsersPage .followButton{
+    margin-left: 365px;
+}
+
+#searchUsersPage .messageButton{
+    margin-left: 240px;
+}
+
+#searchUsersPage button{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #ff2929;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 25px;
+    border: #FFF;
+}
+
+#searchUsersPage .user h2{
+    margin-top: -40px;
+    margin-left: 60px;
+    position: absolute;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.searchPages .user .profilePic {
+    margin-top: 20px;
+}
+
+
+#searchPostPage .post h2{
+    margin-top: -55px;
+    margin-left: 70px;
+
+}

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- In the title, It displays the website name. -->
+    <title>P5Connect</title>
+
+    <!-- Used to access the css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="headerContainer"></div>
+        <ul>
+            <li>
+                <h1>P5Connect</h1>
+            </li>
+            <li><input id="searchBar" type="text" placeholder="Search.." style="display: none;"></li>
+            <li><input id="searchBarSubmit" type="submit" onclick="searchUsers()" value="Search" style="display: none;">
+            </li>
+        </ul>
+    </header>
+
+    <!-- Login -->
+    <div class="formContainer" id="login">
+        <h2>Login</h2>
+
+        <!-- Asks for the users username and password. If it is correct the user will be taken to the home page. -->
+        <input class="inputField" id="loginUsername" type="text" name="username" placeholder="Username" required>
+        <br><br>
+        <input class="inputField" id="loginPassword" type="password" name="password" placeholder="Password" required>
+        <p id="errorMessage"> </p>
+        <input class="button" type="submit" onclick="loginUser()" value="Login">
+
+        <!-- In case the user doesn't have an account, there is a button to redirect the user to the registration page. -->
+        <p>Don't have an account? <input class="hyperButton" type="submit" onclick="display('registration')"
+                value="Sign up"></p>
+    </div>
+
+    <!-- Registration -->
+    <div class="formContainer" id="registration" style="display:none;">
+        <h2>Register</h2>
+
+        <!-- Asks the user to create a username and password. Asks the user to repeat the password to validate whether the user has entered the correct password. -->
+        <!-- Ask the user for extra details such as email. -->
+        <!-- If all the fields have been entered correctly the user will be taken to the login page. -->
+        <input class="inputField" id="regUsername" type="text" name="username" placeholder="Username" required>
+        <br><br>
+        <input class="inputField" id="regEmail" type="email" name="email" placeholder="Email" required>
+        <br><br>
+        <input class="inputField" id="regPassword" type="password" name="password" placeholder="Password" required>
+        <br><br>
+        <input class="inputField" id="regVerifyPassword" type="password" name="verifyPassword"
+            placeholder="Verify Password" required>
+        <p id="regErrorMessage"> </p>
+        <input class="button" type="submit" onclick="registerUser()" value="Sign up">
+
+        <!-- There is a button for the user to return to the login page. -->
+        <p>Already registered? <input class="hyperButton" type="submit" onclick="display('login')" value="Sign in"></p>
+    </div>
+
+    <!-- Profile Menu panel -->
+    <div class="pageContainer" id="profileMenu" style="display:none;">
+        <img class="profilePic" id="profileMenuPic" src="images/profileImg/profileImg.jpg" onclick="display('profile')"
+            alt="Profile image">
+        <h2>Profile Name</h2>
+        <p>Status</p>
+
+        <div id="menuStats">
+            <div class="stats" id="stat1">
+                <span class="label">Posts</span>
+                <span class="count">1.2M</span>
+            </div>
+            <div class="stats" id="stat2">
+                <span class="label">Following</span>
+                <span class="count">56.7M</span>
+            </div>
+            <div class="stats" id="stat3">
+                <span class="label">Followers</span>
+                <span class="count">3.4M</span>
+            </div>
+        </div>
+
+        <ul>
+            <li><button onclick="display('homePage')">Home</button></li>
+            <li><button onclick="display('following')">Following</button></li>
+            <li><button onclick="display('messages')">Messages</button></li>
+            <li><button onclick="display('notifications')">Notifications</button></li>
+            <li><button onclick="displayPopup('popupPost')">Post</button></li>
+            <li><button onclick="display('login')">Logout</button></li>
+        </ul>
+
+    </div>
+
+    <!-- Profile Page -->
+    <div class="profileContainer" id="profile" style="display:none;">
+
+        <div class="myProfile" style="display:none;">
+
+            <img class="profilePic" id="profilePagePic" src="images/profileImg/profileImg.jpg"
+                onclick="display('profile')" alt="Profile image">
+            <h2>Profile name</h2>
+            <p>Status</p>
+
+            <div id="profileStats">
+                <div class="stats" id="profileStat1">
+                    <span class="label">Posts</span>
+                    <span class="count">1.2M</span>
+                </div>
+                <div class="stats" id="profileStat2">
+                    <span class="label">Following</span>
+                    <span class="count">56.7M</span>
+                </div>
+                <div class="stats" id="profileStat3">
+                    <span class="label">Followers</span>
+                    <span class="count">3.4M</span>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 id="postTitle">Posts</h2>
+
+    </div>
+
+
+    <!-- Feed -->
+    <div id="feed" style="display:none;">
+
+        <!-- Create post panel -->
+        <div id="createPost" style="display:none;">
+            <h2>Create post</h2>
+            <img class="profilePic" src="images/profileImg/profileImg.jpg" alt="Profile image">
+            <textarea class="postContent" id="postContent1" placeholder="What's on your mind?"></textarea>
+            <input type="file" id="imageUpload"  accept="image/png, image/gif, image/jpeg">
+            <button class="postButton" onclick="post('feed')"> Post </button>
+        </div>
+
+    </div>
+
+    <!-- Active Following panel -->
+    <div class="pageContainer" id="activeFollowing" style="display:none;">
+        <h2>Following</h2>
+        <div id="userContainer">
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">Active</p>
+            </div>
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">5m ago</p>
+            </div>
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg4.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">1d ago</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- News and updates panel -->
+    <div class="pageContainer" id="newsAndUpdates" style="display:none;">
+        <h2>News and updates</h2>
+        <div id="newsAndUpdatesContainer">
+            <div class="post" style="display:none;">
+                <img class="profilePic" src="images/icon.jpg" alt="Profile image">
+                <h2>Name</h2>
+                <p class="timestamp">5m ago</p>
+                <p class="content">
+                    Persona 5 has dropped a new update! Jump into the game to find out what its all about!!!
+                </p>
+                <button class="likeButton"></button>
+                <button class="commentButton"><i class='bx bxs-comment'></i></button>
+            </div>
+
+            <div class="post" style="display:none;">
+                <img class="profilePic" src="images/icon.jpg" alt="Profile image">
+                <h2>Name</h2>
+                <p class="timestamp">12h ago</p>
+                <p class="content">
+                    Fans have been speculating when the next update will be released. After this interview with the
+                    creator of persona 5
+                    we may get an idea.
+                </p>
+                <button class="likeButton"></button>
+                <button class="commentButton"><i class='bx bxs-comment'></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Following Page -->
+    <div class="pageContainer" id="followingPage" style="display:none;">
+        <h2>Following</h2>
+        <div id="followingContainer">
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">Active</p>
+                <button class="messageButton">Message</button>
+                <button class="followButton">Unfollow</button>
+            </div>
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">5m ago</p>
+                <button class="messageButton">Message</button>
+                <button class="followButton">Unfollow</button>
+            </div>
+            <div class="user" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg4.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="activity">1d ago</p>
+                <button class="messageButton">Message</button>
+                <button class="followButton">Unfollow</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messages Page -->
+    <div class="pageContainer" id="messagesPage" style="display:none;">
+        <h2>Messages</h2>
+        <button class="newMessageButton"><i class="fa fa-plus"></i></button>
+
+        <div class="conversationHistory" id="conversationHistory">
+            <div class="message" id="user1" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="timestamp">08:45</p>
+                <p class="content">
+                    How are you?
+                </p>
+            </div>
+
+            <div class="message" id="user2" style="display:none;">
+                <img class="profilePic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                <h2>Profile name</h2>
+                <p class="timestamp">08:42</p>
+                <p class="content">
+                    Did you read a book today?
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Messages box -->
+    <div class="pageContainer" id="messagesBox" style="display:none;">
+
+        <div class="userInfo" id="userInfo">
+            <img class="profilePic" id="pic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+            <h2>Profile name</h2>
+            <p class="activity">Active</p>
+        </div>
+
+        <div class="chatLog" id="chatLog">
+            <div class="chat" id="chat">
+                <p>Hello</p>
+                <p class="timestamp">08:20</p>
+
+                <p id="sender">Heyy</p>
+                <p class="timestamp">08:44</p>
+
+                <p>How are you?</p>
+                <p class="timestamp">08:45</p>
+            </div>
+        </div>
+
+        <div class="chatBox" id="chatBox">
+            <textarea class="postContent" placeholder="Send a message ..."></textarea>
+            <button id="sendButton"> Send </button>
+        </div>
+
+    </div>
+
+    <!-- Notifications Page -->
+    <div class="pageContainer" id="notificationsPage" style="display:none;">
+        <h2>Notifictaions</h2>
+        <div id="notificationContainer">
+            <div id="newNotification">
+                <h2>New</h2>
+                <div class="notification" style="display:none;">
+                    <img  class="notifPic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has commented on your post.</span></p>
+                    <p class="timestamp">3s ago</p>
+                </div>
+                <div class="notification" style="display:none;">
+                    <img class="notifPic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has liked your post.</span></p>
+                    <p class="timestamp">5s ago</p>
+                </div>
+            </div>
+            <div id="oldNotification">
+                <h2>Old</h2>
+                <div class="notification" style="display:none;">
+                    <img class="notifPic" src="images/profileImg/profileImg2.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has followed you.</span></p>
+                    <p class="timestamp">5d ago</p>
+                </div>
+                <div class="notification" style="display:none;">
+                    <img class="notifPic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has replied to your comment.</span></p>
+                    <p class="timestamp">1w ago</p>
+                </div>
+                <div class="notification" style="display:none;">
+                    <img  class="notifPic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has replied to your comment.</span></p>
+                    <p class="timestamp">1w ago</p>
+                </div>
+                <div class="notification" style="display:none;">
+                    <img  class="notifPic" src="images/profileImg/profileImg4.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has followed you.</span></p>
+                    <p class="timestamp">5w ago</p>
+                </div>
+                <div class="notification" style="display:none;">
+                    <img class="notifPic" src="images/profileImg/profileImg3.jpg" alt="Profile image">
+                    <p>Profile name <span class="content">has followed you.</span></p>
+                    <p class="timestamp">8w ago</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- A popup to create a new post -->
+    <div id="overlay" class="overlay" style="display:none;"></div>
+
+    <div class="pageContainer" id="popupPost" style="display:none;">
+        <h2>Create post</h2>
+        <img class="profilePic" src="images/profileImg/profileImg.jpg" alt="Profile image">
+        <textarea class="postContent" id="postContent2" placeholder="What's on your mind?"></textarea>
+        <button id="exitButton" onclick="exitPopup('popupPost')"> &times; </button>
+        <button class="postButton" onclick="post('popup')"> Post </button>
+    </div>
+
+    <!-- Search Page -->
+    <div class="pageContainer" id="searchPage" style="display:none;">
+        <h2>Search</h2>
+
+        <button id="searchUsers" onclick="searchUsers()"> Users </button>
+        <button id="searchPosts" onclick="searchPosts()"> Posts </button>
+
+        <div class="searchPages" id="searchUsersPage"></div>
+
+        <div class="searchPages" id="searchPostPage" style="display:none;"></div>
+    </div>
+
+
+
+
+    <!-- Used to access the script -->
+    <script src="js/displayHandler.js"></script>
+    <script src="js/backend.js"></script>
+
+</body>
+
+</html>

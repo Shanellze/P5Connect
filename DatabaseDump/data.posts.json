@@ -1,0 +1,226 @@
+[{
+  "_id": {
+    "$oid": "65b30529b06192bba05dcd1e"
+  },
+  "username": "Shanellze",
+  "text": "This is the best post ever. Like if you agree.",
+  "image": "images/post/postImg.png",
+  "timestamp": {
+    "$date": "2024-01-22T20:15:00.338Z"
+  },
+  "likes": [
+    "StarLight",
+    "DarkFall"
+  ],
+  "comments": [
+    {
+      "username": "StarLight",
+      "text": "I agree!",
+      "timestamp": "22/01/24 20:30:00",
+      "likes": [
+        "Shanellze"
+      ],
+      "replies": [
+        {
+          "username": "DarkFall",
+          "text": "Me too!",
+          "timestamp": "22/01/24 20:32:00",
+          "likes": [
+            "StarLight",
+            "Shanellze"
+          ]
+        },
+        {
+          "username": "Shanellze",
+          "text": "Glad to hear that!",
+          "timestamp": "22/01/24 20:48:00",
+          "likes": []
+        }
+      ]
+    },
+    {
+      "username": "DarkFall",
+      "text": "Great post!",
+      "timestamp": "22/01/24 20:45:00",
+      "likes": [
+        "Shanellze"
+      ],
+      "replies": [
+        {
+          "username": "Shanellze",
+          "text": "Thanks!",
+          "timestamp": "22/01/24 20:48:00",
+          "likes": []
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65b306dfb06192bba05dcd1f"
+  },
+  "username": "Shanellze",
+  "text": "Posting is exhasting.",
+  "image": null,
+  "timestamp": {
+    "$date": "2023-12-19T12:09:15.338Z"
+  },
+  "likes": [
+    "StarLight"
+  ],
+  "comments": [
+    {
+      "username": "StarLight",
+      "text": "Tell me about it!",
+      "timestamp": "22/01/24 20:30:00",
+      "likes": [
+        "Shanellze"
+      ],
+      "replies": []
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65b3074db06192bba05dcd21"
+  },
+  "username": "DarkFall",
+  "text": "First post.",
+  "image": "images/post/postImg.png",
+  "timestamp": {
+    "$date": "2024-01-20T16:28:37.338Z"
+  },
+  "likes": [],
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "66186dcb91d2608f872c5abf"
+  },
+  "username": "Shanellze",
+  "text": "yo",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-11T23:10:03.030Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "66186e7b0464c8eabbf8069b"
+  },
+  "username": "StarLight",
+  "text": "hi hi",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-11T23:12:59.338Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "661870cabc0cb960502543f6"
+  },
+  "username": "DarkFall",
+  "text": "New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post! New Post!",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-11T23:22:50.546Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "661880e8c6679f3eed35e6a0"
+  },
+  "username": "Shanellze",
+  "text": "what",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T00:31:36.713Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "66188a3ab15ba7aaef00322b"
+  },
+  "username": "Shanellze",
+  "text": "lllllllllllllllllll",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T01:11:22.867Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "6619458e3b2d3db8661276ad"
+  },
+  "username": "Shanellze",
+  "text": "This is a post.",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T14:30:38.687Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "661955209ce4b86222266bc4"
+  },
+  "username": "Shanellze",
+  "text": "hello",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T15:37:04.386Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "661955bb9ce4b86222266bc5"
+  },
+  "username": "Shanellze",
+  "text": "this is so cool",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T15:39:39.213Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "661956739ce4b86222266bc6"
+  },
+  "username": "Shanellze",
+  "text": "hello",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T15:42:43.977Z"
+  },
+  "likes": 0,
+  "comments": []
+},
+{
+  "_id": {
+    "$oid": "66195b25ce4efd200581c416"
+  },
+  "username": "Brad",
+  "text": "Hello. this is cool.",
+  "image": null,
+  "timestamp": {
+    "$date": "2024-04-12T16:02:45.840Z"
+  },
+  "likes": 0,
+  "comments": []
+}]

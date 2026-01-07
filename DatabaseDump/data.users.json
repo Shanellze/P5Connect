@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "65b30086b06192bba05dcd16"
+  },
+  "username": "Shanellze",
+  "email": "Shanellze@email.com",
+  "password": "password",
+  "profilePicture": "images/profileImg/profileImg.jpg",
+  "status": "This is a status.",
+  "following": [
+    "StarLight",
+    "DarkFall"
+  ],
+  "followers": [
+    "StarLight",
+    "DarkFall",
+    "Brad"
+  ],
+  "lastActive": {
+    "$date": "2024-04-12T15:51:01.332Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b3037eb06192bba05dcd17"
+  },
+  "username": "StarLight",
+  "email": "Starzzz@email.com",
+  "password": "password",
+  "profilePicture": "images/profileImg/profileImg2.jpg",
+  "status": "This is a status.",
+  "following": [
+    "Shanellze",
+    "DarkFall"
+  ],
+  "followers": [
+    "DarkFall",
+    "Shanellze",
+    "Brad"
+  ],
+  "lastActive": {
+    "$date": "2024-01-25T14:10:13.232Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65b303e1b06192bba05dcd18"
+  },
+  "username": "DarkFall",
+  "email": "DarkFall@email.com",
+  "password": "password",
+  "profilePicture": "images/profileImg/profileImg3.jpg",
+  "status": "This is a status.",
+  "following": [
+    "Shanellze",
+    "StarLight"
+  ],
+  "followers": [
+    "StarLight",
+    "Shanellze"
+  ],
+  "lastActive": {
+    "$date": "2024-01-26T14:10:13.232Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6617ba86c7f59c9320722dd1"
+  },
+  "username": "Jayke",
+  "email": "jay@email.com",
+  "password": "@Password12",
+  "profilePicture": "images/profileImg/defaultProfilePicture.jpg",
+  "status": " ",
+  "following": [],
+  "followers": [],
+  "lastActive": {
+    "$date": "2024-04-11T10:25:10.719Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "661940c58b9c8daa3bf43600"
+  },
+  "username": "name",
+  "email": "name@email.com",
+  "password": "@Password12",
+  "profilePicture": "images/profileImg/defaultProfilePicture.jpg",
+  "status": " ",
+  "following": [],
+  "followers": [],
+  "lastActive": {
+    "$date": "2024-04-12T15:52:53.440Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "66195b01ce4efd200581c415"
+  },
+  "username": "Brad",
+  "email": "Brad@email.com",
+  "password": "@Password12",
+  "profilePicture": "images/profileImg/defaultProfilePicture.jpg",
+  "status": " ",
+  "following": [
+    "Shanellze",
+    "StarLight"
+  ],
+  "followers": [],
+  "lastActive": {
+    "$date": "2024-04-12T16:06:16.957Z"
+  }
+}]
