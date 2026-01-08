@@ -58,7 +58,7 @@ The project was built using a structured, full-stack approach:
 3. Ensure MongoDB is running locally on: `mongodb://127.0.0.1:27017`
 4. Start the server:
     ```bash
-    node server.js
+    npm start
     ```
 5. Open your browser and navigate to: `http://localhost:8080`
 
